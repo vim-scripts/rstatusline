@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4031
+
+rstatusline is a small plugin to show buffer list on statusline with highlight on current buffer name.

@@ -7,6 +7,7 @@
 "author:Ruoshan Huang (ruoshan.huang@gmail.com)
 "
 
+set laststatus=2
 hi StatusLine term=bold,reverse cterm=bold,reverse ctermfg=238 ctermbg=253
 hi StatusLineNC term=reverse cterm=reverse ctermfg=238 ctermbg=253
 hi Hl_status term=bold,reverse cterm=bold,reverse ctermfg=238 ctermbg=199
@@ -65,4 +66,4 @@ function! MyStatusline()
     endwhile
     return '%< %m%r '.buflist_str.' >'.'%= %l,%c%V/%L %P %n/%{bufnr("$")} '
 endfunction
-au BufWinEnter * set statusline=%!MyStatusline()
+set statusline=%!MyStatusline()

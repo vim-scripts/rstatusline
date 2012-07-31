@@ -79,7 +79,6 @@ function! MyStatusline()
         endif
         let i+=1
     endwhile
-    "return '%< %m%r '.buflist_str.' >'.'%= %l,%c%V/%L %P %n/%{bufnr("$")} '
-    return '%< %m%r '.buflist_str.' >'.'%= %l,%c%V/%L %P %n/'.bufnr_list.' '
+    return '%< %m%r '.buflist_str.' >'.'%= %l,%c%V/%L %P '.bufnr_list.' '
 endfunction
-set statusline=%!MyStatusline()
+au BufEnter,BufNew,BufDelete,BufWinEnter * let &l:statusline=MyStatusline()
